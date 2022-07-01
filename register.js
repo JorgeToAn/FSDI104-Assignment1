@@ -3,8 +3,8 @@
 
 let petSalon ={
     //attributes
-    name:"Placeholder name",
-    address:"Ave University 768",
+    name:"El Sombrero",
+    address:"Ave Starlight 804",
     pets:[
         {
             //anonymous object
@@ -53,10 +53,21 @@ let petSalon ={
 
 function displayInfo(){
     document.getElementById("info").innerHTML=`
-    Welcome to the ${petSalon.name} family. It is available at ${petSalon.address} from ${petSalon.hours.open} to ${petSalon.hours.close}`;
+    Welcome to the ${petSalon.name} family. It is available at ${petSalon.address} from ${petSalon.hours.open} to ${petSalon.hours.close}.`;
+}
+
+//display the name of the pets registered into the console
+function logPets(){
+    for(let i=0; i<petSalon.pets.length; i++){
+        console.log(petSalon.pets[i].name);
+    }
+}
+
+//alerts the user how many pets are registered
+function alertPets(){
+    alert(`There are currently ${petSalon.pets.length} pets registered!`);
 }
 
 displayInfo();
-for(let i=0; i<petSalon.pets.length; i++){
-    console.log(petSalon.pets[i].name);
-};
+logPets();
+alertPets();
